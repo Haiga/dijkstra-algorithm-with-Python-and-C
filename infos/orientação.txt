@@ -1,0 +1,76 @@
+Orientações gerais que devem ser seguidas para submissão do trabalho prático. Qualquer dúvida em relação às especificações deve ser discutida preferencialmente nesse tópico ou enviada para meu e-mail (rafaelgrandsire @ dcc.ufmg.br).
+
+Implementação
+
+As implementações devem ser testadas em uma máquina Linux do DCC de livre acesso aos alunos da pós-graduação via acesso remoto. Essa é a garantia que a implementação será compilada e executada em um ambiente conhecido pelo aluno.
+https://cha.crc.dcc.ufmg.br/bc/howto/remote/ssh
+
+As linguagens de programação aceitas são: C, C++, Java e Python.
+Não é permitido o uso de bibliotecas de terceiros. Você pode utilizar a biblioteca padrão da sua linguagem.
+Não é permitido o compartilhamento de código entre os estudantes.
+
+O código implementado deve ser compilado (se for o caso) da seguinte maneira:
+$ ./compilar.sh
+O shell script "compilar.sh" deverá conter:
+
+#!/bin/bash
+< código para compilar seu programa >
+
+O código implementado deverá ser executado com a seguinte linha de comando:
+$ ./executar.sh entrada saída
+
+O shell script "executar.sh" deverá conter:
+#!/bin/bash
+< código para executar seu programa de modo que a entrada seja lida em $1 e a saída em $2 >
+
+Por exemplo, caso você tenha feito um código em C++ no arquivo main.cpp que lê e escreve na entrada e saída padrão, os scripts devem ser da forma:
+
+compilar.sh
+#!/bin/bash
+g++ -std=c++11 main.cpp
+
+executar.sh
+#!/bin/bash
+./a.out < $1 > $2
+
+Relatório
+
+O relatório não deve exceder 1 página e deverá conter apenas um pequeno cabeçalho com nome e matrícula e duas seções:
+
+Modelagem: Explicação breve da modelagem do problema.
+Análise de complexidade: Análise de complexidade das funções principais da solução e análise de complexidade total.
+
+Recomendo fortemente que seja feito em LaTeX.
+Exemplo de template: https://homepages.dcc.ufmg.br/~gabriel/AlgComb/wp-content/uploads/2019/02/algcomb1template.txt
+
+
+Submissão
+
+Deve-se submeter um arquivo .zip contendo os códigos-fonte, shell scripts e o relatório, através do moodle. Se atente à data especificada.
+
+Avaliação
+
+O trabalho vale 5 pontos e será avaliado a partir dos seguintes critérios:
+
+Execução correta do código em entradas de testes. Além dos casos de testes disponibilizados, serão utilizados outros casos de testes a fim de verificar a corretude da solução proposta;
+
+Conteúdo do relatório, que deve conter os itens mencionados anteriormente, além do esforço em escrever um texto coeso e de fácil compreensão.
+
+Após submeter seu arquivo .zip no moodle, faça download da submissão e verifique que o mesmo não está corrompido. Não será dada segunda chance de submissão para arquivos corrompidos.
+
+
+Linguagens de Programação:
+A diferença no tempo de execução entre linguagens já foi levada em consideração para o os limites máximos de tempo e memória.
+
+Java:
+Pra quem quiser utilizar Java, leia e escreva utilizando BufferedReader & BufferedWriter.
+Exemplo de template: https://homepages.dcc.ufmg.br/~rafaelgrandsire/template.java
+
+Python:
+
+Aos alunos que optaram por utilizar a linguagem de programação Python, sugiro que testem a utilização do pypy, instalado nos computadores da sala 2019, como alternativa para uma execução mais eficiente do código.
+
+Nome de alguns computadores da sala 2019:
+cipo.grad
+guaxupe
+urucuia
