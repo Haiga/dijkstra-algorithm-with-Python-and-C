@@ -114,17 +114,17 @@ void *dijkstra(int verticeOrigem, int **matrizAdjacencia, int numeroVertices, in
 }
 
 
-int main(int argc, char *argv[]) {
+int main() {
 
     int numVertex = 0;
     int numEdges = 0;
     int **weights = new int *;
 
-    std::ifstream file(argv[1]);
-    if (file.is_open()) {
+    //std::ifstream file(argv[1]);
+    //if (file.is_open()) {
         std::string line;
         int contLines = 0;
-        while (std::getline(file, line)) {
+        while (std::getline(cin, line)) {
             if (contLines == 0) {
                 vector<string> tokens = split(line, " ");
                 numVertex = stoi(tokens[0]);
@@ -150,8 +150,8 @@ int main(int argc, char *argv[]) {
             contLines += 1;
             //printf("%s\n", line.c_str());
         }
-        file.close();
-    }
+        //file.close();
+    //}
 
 
     int max_distancia = 0;
