@@ -1,2 +1,2 @@
 #!/bin/bash
-./main.out < $1 > $2
+./main.o < $1 > $2
