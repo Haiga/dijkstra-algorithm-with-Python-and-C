@@ -1,4 +1,4 @@
-// dijkstra.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
+// main.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
 //
 
 #include <iostream>
@@ -7,11 +7,10 @@
 #include <vector>
 //#include <bits/stdc++.h>
 // a soma do peso das arestas de um grafo de tamanho 300 vértices
-// com arestas de pesos <= 300 não passa de 90.000
+// com arestas de pesos <= 100 não passa de 900.000
 // logo 999999999 pode ser considerado infinito
 
 const int myINFINITY = 999999999;
-//#include "dijkstra.h"
 using namespace std;
 
 vector<string> split(const string &str, const string &delim) {
